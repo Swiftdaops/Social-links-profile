@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=400, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Social links profile</title>
+
+  <!-- dotLottie Player -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100vh;
+      background: #000;
+      color: hsl(0, 0%, 100%);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* dotLottie background styling for full page */
+    .lottie-bg-main {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      object-fit: cover;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+      background:gray;
+      padding: 32px 20px 20px 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      min-height: 600px;
+      backdrop-filter: blur(2px);
+    }
+
+    .profile-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .location {
+      color: hsl(132, 100%, 52%);
+      font-size: 11px;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 28px 0 24px 0;
+    }
+
+    .social-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 0;
+      background: hsl(0, 0%, 20%);
+      color: hsl(0, 0%, 100%);
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .social-btn:hover,
+    .social-btn:focus {
+      background: hsl(120, 4%, 15%);
+      color: hsl(0, 0%, 100%);
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    /* Responsive */
+    @media (max-width: 500px) {
+      .container {
+        max-width: 95vw;
+        width: 95vw;
+        min-height: 400px;
+      }
+      .profile-image {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 14px;
+      }
+      h1 {
+        font-size: 1.3rem;
+      }
+      .social-btn {
+        font-size: 14px;
+        padding: 12px 0;
+      }
+      .social-links {
+        gap: 10px;
+        margin: 20px 0 16px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- dotLottie background animation for main page -->
+  <dotlottie-player
+    class="lottie-bg-main"
+    src="https://lottie.host/469aec61-9699-46fc-b1e6-ee782d7bf2e6/Aq8b0mY3sR.lottie"
+    background="transparent"
+    speed="2"
+    direction="-1"
+    playMode="normal"
+    loop
+    autoplay>
+  </dotlottie-player>
+  <div class="container">
+    <div class="profile-content">
+      <img src="assets/images/avatar-jessica.jpeg" alt="Profile Image" class="profile-image" />
+      <h1>Jessica Randall</h1>
+      <p class="location">London, United Kingdom</p>
+      <p>"Front-end developer and avid reader."</p>
+      <div class="social-links">
+        <a class="social-btn" href="http://127.0.0.1:5500/index.html">GitHub</a>
+        <a class="social-btn" href="http://127.0.0.1:5500/index.html">Frontend Mentor</a>
+        <a class="social-btn" href="http://127.0.0.1:5500/index.html">LinkedIn</a>
+        <a class="social-btn" href="http://127.0.0.1:5500/index.html">Twitter</a>
+        <a class="social-btn" href="http://127.0.0.1:5500/index.html">Instagram</a>
+      </div>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Obi Tobechukwu Favour</a>.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
